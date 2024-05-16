@@ -1,12 +1,14 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 
-app = Flask(__name__)
-
+app = Flask(__name__, static_folder='static')
 
 @app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
+def home():
+    return send_from_directory('static/html', 'index.html')
 
+@app.route('/<path:path>')
+def static_files(path):
+    return send_from_directory('static/html', path)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
