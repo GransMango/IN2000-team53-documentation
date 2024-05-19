@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Team 53</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Lottie Animation Player -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <style>
+        body, html {
+            height: 100%; /* Full height */
+            margin: 0; /* Remove default margin */
+            overflow: hidden; /* Prevent scrolling */
+            font-family: 'Montserrat', sans-serif; /* Consistent font usage */
+            background-color: #F28F68; /* Custom color from the uploaded image */
+        }
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 100vw;
+            min-height: 100vh;
+            width: auto;
+            height: auto;
+            z-index: -1; /* Place it behind the content */
+        }
+        .container {
+            position: relative; /* Ensures content is above background */
+            z-index: 1;
+            padding-top: 10vh;
+            color: #000; /* Black text */
+        }
+        .hero, .row {
+            animation: fadeIn 2s ease-out forwards; /* Fade in animation for text */
+            opacity: 0; /* Start fully transparent */
+        }
+        .hero {
+            background-color: rgba(255, 255, 255, 0.8); /* Translucent background for readability */
+            padding: 3rem 1rem;
+            margin-bottom: 2rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+        .footer {
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* Fully visible */
+            }
+        }
+    </style>
+</head>
+<body>
+    <dotlottie-player
+        class="background-animation"
+        src="https://lottie.host/e8f661c0-b541-45c8-9d5c-b08be222b70f/0p5Sl2arG6.json"
+        background="transparent"
+        speed="1"
+        loop="false"
+        autoplay></dotlottie-player>
+
+    <div class="container">
+        <div class="hero">
+            <h1>About Team 53</h1>
+            <p>Learn more about our mission and the people behind our project.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>Our Mission</h2>
+                <p>WeatherApp is developed by Team 53 at the University of Oslo. Our aim is to provide real-time, accurate weather information to suggest the outdoor activities based on user-defined preferences for weather conditions. Users can customize alerts for wind speed, rainfall, and temperature for optimal outdoor experiences.</p>
+
+                <h2>Development Approach</h2>
+                <p>Throughout our agile development process we've combined Scrum and Kanban methodologies with regular updates, allowing for flexible yet disciplined project management. The app's design and development is powered by Android Studio and Jetpack Compose. For our APIs we're using Flask with continuous integration and deployment facilitated through GitHub Actions.</p>
+
+                <h2>Meet the Team</h2>
+                <p>Our team consists of dedicated software development students driven by a passion for creating solutions that bridge technology and practical usability. Our collective skills span across system architecture, UX design, and mobile app development.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
